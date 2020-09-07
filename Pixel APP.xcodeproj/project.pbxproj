@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,12 @@
 		9F2EF2092506DD380070F96C /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF2082506DD380070F96C /* BaseCollectionCell.swift */; };
 		9F2EF20C2506E0CB0070F96C /* FetchImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF20B2506E0CB0070F96C /* FetchImageModel.swift */; };
 		9F2EF20F2506E1BA0070F96C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF20E2506E1BA0070F96C /* Constants.swift */; };
+		9F2EF2112506E3230070F96C /* ListImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF2102506E3230070F96C /* ListImageData.swift */; };
+		9F2EF2142506E35E0070F96C /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF2132506E35E0070F96C /* PinterestLayout.swift */; };
+		9F2EF2162506E3780070F96C /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF2152506E3780070F96C /* ImageCollectionViewCell.swift */; };
+		9F2EF2192506E3DF0070F96C /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF2182506E3DF0070F96C /* CustomImageView.swift */; };
+		9F2EF21B2506E4E40070F96C /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF21A2506E4E40070F96C /* OnboardingData.swift */; };
+		9F2EF21E2506E51B0070F96C /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF21D2506E51B0070F96C /* OnboardingCollectionViewCell.swift */; };
 		FAA005ACDD522E8105D18C44 /* Pods_Pixel_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D19BC427C6586875480F8 /* Pods_Pixel_APP.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,12 @@
 		9F2EF2082506DD380070F96C /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		9F2EF20B2506E0CB0070F96C /* FetchImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageModel.swift; sourceTree = "<group>"; };
 		9F2EF20E2506E1BA0070F96C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9F2EF2102506E3230070F96C /* ListImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImageData.swift; sourceTree = "<group>"; };
+		9F2EF2132506E35E0070F96C /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		9F2EF2152506E3780070F96C /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F2EF2182506E3DF0070F96C /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		9F2EF21A2506E4E40070F96C /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		9F2EF21D2506E51B0070F96C /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		F32D19BC427C6586875480F8 /* Pods_Pixel_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pixel_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,7 +92,6 @@
 				0F153005C0CFFDE8AD077643 /* Pods-Pixel APP.debug.xcconfig */,
 				36837E70E8A59DC164D60C32 /* Pods-Pixel APP.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -109,8 +120,8 @@
 				9F2EF1DC2506D90E0070F96C /* SceneDelegate.swift */,
 				9F2EF20A2506E0B90070F96C /* services */,
 				9F2EF1F12506D9330070F96C /* helpers */,
-				9F2EF1F02506D92E0070F96C /* view */,
 				9F2EF1EF2506D9280070F96C /* model */,
+				9F2EF1F02506D92E0070F96C /* view */,
 				9F2EF1EE2506D91B0070F96C /* controller */,
 				9F2EF1E02506D90E0070F96C /* Main.storyboard */,
 				9F2EF1E32506D9110070F96C /* Assets.xcassets */,
@@ -134,6 +145,8 @@
 		9F2EF1EF2506D9280070F96C /* model */ = {
 			isa = PBXGroup;
 			children = (
+				9F2EF2102506E3230070F96C /* ListImageData.swift */,
+				9F2EF21A2506E4E40070F96C /* OnboardingData.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -141,8 +154,9 @@
 		9F2EF1F02506D92E0070F96C /* view */ = {
 			isa = PBXGroup;
 			children = (
+				9F2EF2172506E3D20070F96C /* custom */,
+				9F2EF2122506E3560070F96C /* layout */,
 				9F2EF2042506DD050070F96C /* cell */,
-				9F2EF2022506DB2A0070F96C /* HeaderView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -178,6 +192,7 @@
 		9F2EF2042506DD050070F96C /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				9F2EF21C2506E5120070F96C /* ONBOARD */,
 				9F2EF2082506DD380070F96C /* BaseCollectionCell.swift */,
 				9F2EF2052506DD0A0070F96C /* images */,
 			);
@@ -188,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				9F2EF2062506DD120070F96C /* ImageCategoryCollectionViewCell.swift */,
+				9F2EF2152506E3780070F96C /* ImageCollectionViewCell.swift */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -198,6 +214,31 @@
 				9F2EF20B2506E0CB0070F96C /* FetchImageModel.swift */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		9F2EF2122506E3560070F96C /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF2132506E35E0070F96C /* PinterestLayout.swift */,
+			);
+			path = layout;
+			sourceTree = "<group>";
+		};
+		9F2EF2172506E3D20070F96C /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF2022506DB2A0070F96C /* HeaderView.swift */,
+				9F2EF2182506E3DF0070F96C /* CustomImageView.swift */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
+		9F2EF21C2506E5120070F96C /* ONBOARD */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF21D2506E51B0070F96C /* OnboardingCollectionViewCell.swift */,
+			);
+			path = ONBOARD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,14 +361,20 @@
 				9F2EF1DF2506D90E0070F96C /* CustomTabBarVC.swift in Sources */,
 				9F2EF1F92506D96E0070F96C /* UIImageView.swift in Sources */,
 				9F2EF1F82506D96E0070F96C /* ExtensionUivew.swift in Sources */,
+				9F2EF21E2506E51B0070F96C /* OnboardingCollectionViewCell.swift in Sources */,
 				9F2EF20F2506E1BA0070F96C /* Constants.swift in Sources */,
+				9F2EF2162506E3780070F96C /* ImageCollectionViewCell.swift in Sources */,
 				9F2EF1DB2506D90E0070F96C /* AppDelegate.swift in Sources */,
+				9F2EF2112506E3230070F96C /* ListImageData.swift in Sources */,
 				9F2EF1DD2506D90E0070F96C /* SceneDelegate.swift in Sources */,
 				9F2EF2032506DB2A0070F96C /* HeaderView.swift in Sources */,
 				9F2EF20C2506E0CB0070F96C /* FetchImageModel.swift in Sources */,
+				9F2EF2192506E3DF0070F96C /* CustomImageView.swift in Sources */,
 				9F2EF2072506DD120070F96C /* ImageCategoryCollectionViewCell.swift in Sources */,
 				9F2EF2002506DA6F0070F96C /* OnboardingVC.swift in Sources */,
 				9F2EF2092506DD380070F96C /* BaseCollectionCell.swift in Sources */,
+				9F2EF21B2506E4E40070F96C /* OnboardingData.swift in Sources */,
+				9F2EF2142506E35E0070F96C /* PinterestLayout.swift in Sources */,
 				9F2EF1F62506D96E0070F96C /* UIButton.swift in Sources */,
 				9F2EF1FE2506DA480070F96C /* VideosVC.swift in Sources */,
 			);

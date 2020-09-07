@@ -173,9 +173,9 @@ extension ImagesVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = ImagePreviewViewController()
-        vc.imageId = imageList![indexPath.row].id
-        navigationController?.pushViewController(vc, animated: true)
+//        let vc = ImagePreviewViewController()
+//        vc.imageId = imageList![indexPath.row].id
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
@@ -183,14 +183,14 @@ extension ImagesVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
 extension ImagesVC: HeaderActionsProtocol{
     
     func didSearchBarTapped() {
-        let vc = SearchViewController()
-        navigationController?.pushViewController(vc, animated: false)
+//        let vc = SearchViewController()
+//        navigationController?.pushViewController(vc, animated: false)
     }
     
     func categoryTapped(_ category: String) {
-        let vc = CategoryViewController()
-        vc.query = category
-        navigationController?.pushViewController(vc, animated: true)
+//        let vc = CategoryViewController()
+//        vc.query = category
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
