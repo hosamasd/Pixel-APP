@@ -9,21 +9,49 @@
 /* Begin PBXBuildFile section */
 		9F2EF1DB2506D90E0070F96C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1DA2506D90E0070F96C /* AppDelegate.swift */; };
 		9F2EF1DD2506D90E0070F96C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1DC2506D90E0070F96C /* SceneDelegate.swift */; };
-		9F2EF1DF2506D90E0070F96C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1DE2506D90E0070F96C /* ViewController.swift */; };
+		9F2EF1DF2506D90E0070F96C /* CustomTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1DE2506D90E0070F96C /* CustomTabBarVC.swift */; };
 		9F2EF1E22506D90E0070F96C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F2EF1E02506D90E0070F96C /* Main.storyboard */; };
 		9F2EF1E42506D9110070F96C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F2EF1E32506D9110070F96C /* Assets.xcassets */; };
 		9F2EF1E72506D9110070F96C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F2EF1E52506D9110070F96C /* LaunchScreen.storyboard */; };
+		9F2EF1F62506D96E0070F96C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1F22506D96D0070F96C /* UIButton.swift */; };
+		9F2EF1F72506D96E0070F96C /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1F32506D96D0070F96C /* UILabel.swift */; };
+		9F2EF1F82506D96E0070F96C /* ExtensionUivew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1F42506D96E0070F96C /* ExtensionUivew.swift */; };
+		9F2EF1F92506D96E0070F96C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1F52506D96E0070F96C /* UIImageView.swift */; };
+		9F2EF1FC2506DA300070F96C /* ImagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1FB2506DA300070F96C /* ImagesVC.swift */; };
+		9F2EF1FE2506DA480070F96C /* VideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1FD2506DA480070F96C /* VideosVC.swift */; };
+		9F2EF2002506DA6F0070F96C /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF1FF2506DA6F0070F96C /* OnboardingVC.swift */; };
+		9F2EF2032506DB2A0070F96C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF2022506DB2A0070F96C /* HeaderView.swift */; };
+		9F2EF2072506DD120070F96C /* ImageCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF2062506DD120070F96C /* ImageCategoryCollectionViewCell.swift */; };
+		9F2EF2092506DD380070F96C /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF2082506DD380070F96C /* BaseCollectionCell.swift */; };
+		9F2EF20C2506E0CB0070F96C /* FetchImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF20B2506E0CB0070F96C /* FetchImageModel.swift */; };
+		9F2EF20F2506E1BA0070F96C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF20E2506E1BA0070F96C /* Constants.swift */; };
+		FAA005ACDD522E8105D18C44 /* Pods_Pixel_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D19BC427C6586875480F8 /* Pods_Pixel_APP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F153005C0CFFDE8AD077643 /* Pods-Pixel APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pixel APP.debug.xcconfig"; path = "Target Support Files/Pods-Pixel APP/Pods-Pixel APP.debug.xcconfig"; sourceTree = "<group>"; };
+		36837E70E8A59DC164D60C32 /* Pods-Pixel APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pixel APP.release.xcconfig"; path = "Target Support Files/Pods-Pixel APP/Pods-Pixel APP.release.xcconfig"; sourceTree = "<group>"; };
 		9F2EF1D72506D90E0070F96C /* Pixel APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixel APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2EF1DA2506D90E0070F96C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F2EF1DC2506D90E0070F96C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F2EF1DE2506D90E0070F96C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F2EF1DE2506D90E0070F96C /* CustomTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVC.swift; sourceTree = "<group>"; };
 		9F2EF1E12506D90E0070F96C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F2EF1E32506D9110070F96C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F2EF1E62506D9110070F96C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F2EF1E82506D9110070F96C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F2EF1F22506D96D0070F96C /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		9F2EF1F32506D96D0070F96C /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		9F2EF1F42506D96E0070F96C /* ExtensionUivew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUivew.swift; sourceTree = "<group>"; };
+		9F2EF1F52506D96E0070F96C /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		9F2EF1FB2506DA300070F96C /* ImagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesVC.swift; sourceTree = "<group>"; };
+		9F2EF1FD2506DA480070F96C /* VideosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosVC.swift; sourceTree = "<group>"; };
+		9F2EF1FF2506DA6F0070F96C /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		9F2EF2022506DB2A0070F96C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		9F2EF2062506DD120070F96C /* ImageCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F2EF2082506DD380070F96C /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
+		9F2EF20B2506E0CB0070F96C /* FetchImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageModel.swift; sourceTree = "<group>"; };
+		9F2EF20E2506E1BA0070F96C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F32D19BC427C6586875480F8 /* Pods_Pixel_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pixel_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +59,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA005ACDD522E8105D18C44 /* Pods_Pixel_APP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2497C415CB2FB8224DA76DB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F32D19BC427C6586875480F8 /* Pods_Pixel_APP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85979CA86BA37791B73C4A4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F153005C0CFFDE8AD077643 /* Pods-Pixel APP.debug.xcconfig */,
+				36837E70E8A59DC164D60C32 /* Pods-Pixel APP.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9F2EF1CE2506D90E0070F96C = {
 			isa = PBXGroup;
 			children = (
 				9F2EF1D92506D90E0070F96C /* Pixel APP */,
 				9F2EF1D82506D90E0070F96C /* Products */,
+				85979CA86BA37791B73C4A4D /* Pods */,
+				2497C415CB2FB8224DA76DB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +107,97 @@
 			children = (
 				9F2EF1DA2506D90E0070F96C /* AppDelegate.swift */,
 				9F2EF1DC2506D90E0070F96C /* SceneDelegate.swift */,
-				9F2EF1DE2506D90E0070F96C /* ViewController.swift */,
+				9F2EF20A2506E0B90070F96C /* services */,
+				9F2EF1F12506D9330070F96C /* helpers */,
+				9F2EF1F02506D92E0070F96C /* view */,
+				9F2EF1EF2506D9280070F96C /* model */,
+				9F2EF1EE2506D91B0070F96C /* controller */,
 				9F2EF1E02506D90E0070F96C /* Main.storyboard */,
 				9F2EF1E32506D9110070F96C /* Assets.xcassets */,
 				9F2EF1E52506D9110070F96C /* LaunchScreen.storyboard */,
 				9F2EF1E82506D9110070F96C /* Info.plist */,
 			);
 			path = "Pixel APP";
+			sourceTree = "<group>";
+		};
+		9F2EF1EE2506D91B0070F96C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF1DE2506D90E0070F96C /* CustomTabBarVC.swift */,
+				9F2EF1FD2506DA480070F96C /* VideosVC.swift */,
+				9F2EF2012506DAC00070F96C /* Images */,
+				9F2EF1FF2506DA6F0070F96C /* OnboardingVC.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		9F2EF1EF2506D9280070F96C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9F2EF1F02506D92E0070F96C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF2042506DD050070F96C /* cell */,
+				9F2EF2022506DB2A0070F96C /* HeaderView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9F2EF1F12506D9330070F96C /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF1FA2506D9740070F96C /* my EXT */,
+				9F2EF20E2506E1BA0070F96C /* Constants.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		9F2EF1FA2506D9740070F96C /* my EXT */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF1F42506D96E0070F96C /* ExtensionUivew.swift */,
+				9F2EF1F22506D96D0070F96C /* UIButton.swift */,
+				9F2EF1F52506D96E0070F96C /* UIImageView.swift */,
+				9F2EF1F32506D96D0070F96C /* UILabel.swift */,
+			);
+			path = "my EXT";
+			sourceTree = "<group>";
+		};
+		9F2EF2012506DAC00070F96C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF1FB2506DA300070F96C /* ImagesVC.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		9F2EF2042506DD050070F96C /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF2082506DD380070F96C /* BaseCollectionCell.swift */,
+				9F2EF2052506DD0A0070F96C /* images */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		9F2EF2052506DD0A0070F96C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF2062506DD120070F96C /* ImageCategoryCollectionViewCell.swift */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		9F2EF20A2506E0B90070F96C /* services */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EF20B2506E0CB0070F96C /* FetchImageModel.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F2EF1EB2506D9110070F96C /* Build configuration list for PBXNativeTarget "Pixel APP" */;
 			buildPhases = (
+				E580C130AD8AD844A1B7D7D7 /* [CP] Check Pods Manifest.lock */,
 				9F2EF1D32506D90E0070F96C /* Sources */,
 				9F2EF1D42506D90E0070F96C /* Frameworks */,
 				9F2EF1D52506D90E0070F96C /* Resources */,
+				CA21A31DC870B155E51E198B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +268,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CA21A31DC870B155E51E198B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pixel APP/Pods-Pixel APP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pixel APP/Pods-Pixel APP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pixel APP/Pods-Pixel APP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E580C130AD8AD844A1B7D7D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pixel APP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F2EF1D32506D90E0070F96C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F2EF1DF2506D90E0070F96C /* ViewController.swift in Sources */,
+				9F2EF1FC2506DA300070F96C /* ImagesVC.swift in Sources */,
+				9F2EF1F72506D96E0070F96C /* UILabel.swift in Sources */,
+				9F2EF1DF2506D90E0070F96C /* CustomTabBarVC.swift in Sources */,
+				9F2EF1F92506D96E0070F96C /* UIImageView.swift in Sources */,
+				9F2EF1F82506D96E0070F96C /* ExtensionUivew.swift in Sources */,
+				9F2EF20F2506E1BA0070F96C /* Constants.swift in Sources */,
 				9F2EF1DB2506D90E0070F96C /* AppDelegate.swift in Sources */,
 				9F2EF1DD2506D90E0070F96C /* SceneDelegate.swift in Sources */,
+				9F2EF2032506DB2A0070F96C /* HeaderView.swift in Sources */,
+				9F2EF20C2506E0CB0070F96C /* FetchImageModel.swift in Sources */,
+				9F2EF2072506DD120070F96C /* ImageCategoryCollectionViewCell.swift in Sources */,
+				9F2EF2002506DA6F0070F96C /* OnboardingVC.swift in Sources */,
+				9F2EF2092506DD380070F96C /* BaseCollectionCell.swift in Sources */,
+				9F2EF1F62506D96E0070F96C /* UIButton.swift in Sources */,
+				9F2EF1FE2506DA480070F96C /* VideosVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +471,7 @@
 		};
 		9F2EF1EC2506D9110070F96C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F153005C0CFFDE8AD077643 /* Pods-Pixel APP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +484,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hosam.net.Pixel-APP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9F2EF1ED2506D9110070F96C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36837E70E8A59DC164D60C32 /* Pods-Pixel APP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hosam.net.Pixel-APP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
