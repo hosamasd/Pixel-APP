@@ -41,16 +41,7 @@ class ImagesVC: UIViewController {
     let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
     
     
-    fileprivate func getImagesAndCached() {
-        FetchImageModel.fetchImages(url: "\(Constants.BASE_URL)/search", query: "new", perPage: "10", page: "\(page)") { (FetchedImages,err)  in
-            guard let FetchedImages=FetchedImages else{return}
-            self.FetchedImages = FetchedImages
-            self.getImageArray(FetchedImages)
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +67,17 @@ class ImagesVC: UIViewController {
         collectionView.anchor(top: headerView.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
     }
     
+    fileprivate func getImagesAndCached() {
+        FetchImageModel.fetchImages(url: "\(Constants.BASE_URL)/search", query: "new", perPage: "10", page: "\(page)") { (FetchedImages,err)  in
+            guard let FetchedImages=FetchedImages else{return}
+            self.FetchedImages = FetchedImages
+            self.getImageArray(FetchedImages)
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
     func getImageArray(_ data:MainPhotosModel){
         var images = [PhotoModel]()
         guard let imgResult = data.photos else {return}
@@ -98,12 +100,12 @@ class ImagesVC: UIViewController {
     
     func setUpNavigationBar(){
         navigationController?.navigationBar.topItem?.title = "PIXEL"
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 0.5)
-        navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
-        navigationController?.navigationBar.layer.shadowOpacity = 0.6
-        navigationController?.navigationBar.layer.shadowRadius = 0.3
+//        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 0.5)
+//        navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+//        navigationController?.navigationBar.layer.shadowOpacity = 0.6
+//        navigationController?.navigationBar.layer.shadowRadius = 0.3
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.isHidden = false
@@ -180,8 +182,8 @@ extension ImagesVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
     extension ImagesVC: HeaderActionsProtocol{
         
         func didSearchBarTapped() {
-            //        let vc = SearchViewController()
-            //        navigationController?.pushViewController(vc, animated: false)
+                    let vc = SearchVC()
+                    navigationController?.pushViewController(vc, animated: false)
         }
         
         func categoryTapped(_ category: String) {

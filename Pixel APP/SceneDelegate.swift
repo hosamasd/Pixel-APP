@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
            let userDefaults = UserDefaults.standard
            if userDefaults.bool(forKey: "onboardingCompletes"){
 
-               window?.rootViewController = CustomTabBarVC()
+               window?.rootViewController = SearchVC()//CustomTabBarVC()
            } else {
                window?.rootViewController = OnboardingVC()
            }
