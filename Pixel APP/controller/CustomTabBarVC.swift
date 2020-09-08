@@ -21,7 +21,7 @@ class CustomTabBarVC: UITabBarController {
             let vc2 = VideosVC()
             let videoVC = UINavigationController(rootViewController: vc2)
             
-            let tabBarList = [imageVC , videoVC]
+            let tabBarList = [videoVC,imageVC ]
             viewControllers = tabBarList
             
             

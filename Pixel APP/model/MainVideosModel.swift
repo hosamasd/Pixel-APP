@@ -29,12 +29,14 @@ struct VideoModel:Codable {
           let photographerID: Int
           var src: Src?
           let id: Int
+    var duration: Int?
+    
           let liked: Bool
           let width: Int
           let photographerURL: String
 
           enum CodingKeys: String, CodingKey {
-              case height, photographer, url
+              case height, photographer, url,duration
               case photographerID = "photographer_id"
               case src, id, liked, width
               case photographerURL = "photographer_url"

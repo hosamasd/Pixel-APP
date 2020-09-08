@@ -11,7 +11,7 @@ import UIKit
 class FetchVideoModel {
     
     
-    static func fetchVideos(url:String, query:String, perPage:String, page:String, completion: @escaping (MainPhotosModel?,Error?) ->Void){
+    static func fetchVideos(url:String, query:String, perPage:String, page:String, completion: @escaping (MainVideosModel?,Error?) ->Void){
         
         let urls = "\(url)/?query=\(query)&per_page=\(perPage)&page=\(page)"
         

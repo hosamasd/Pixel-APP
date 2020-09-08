@@ -100,12 +100,12 @@ class ImagesVC: UIViewController {
     
     func setUpNavigationBar(){
         navigationController?.navigationBar.topItem?.title = "PIXEL"
-//        navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 0.5)
-//        navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
-//        navigationController?.navigationBar.layer.shadowOpacity = 0.6
-//        navigationController?.navigationBar.layer.shadowRadius = 0.3
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 0.5)
+        navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+        navigationController?.navigationBar.layer.shadowOpacity = 0.6
+        navigationController?.navigationBar.layer.shadowRadius = 0.3
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.isHidden = false
