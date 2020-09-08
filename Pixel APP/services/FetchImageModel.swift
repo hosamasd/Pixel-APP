@@ -17,13 +17,9 @@ class Photos {
     var thumbnail:String!
 }
 
-class FetchImageModel:NSObject {
+class FetchImageModel {
     
-    var totalResults:Int!
-    var photoData:[Photos]!
-    
-    
-    
+ 
     static func fetchImages(url:String, query:String, perPage:String, page:String, completion: @escaping (MainPhotosModel?,Error??) -> ()){
         
         let urls = "\(url)/?query=\(query)&per_page=\(perPage)&page=\(page)"

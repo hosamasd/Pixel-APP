@@ -15,7 +15,7 @@ struct filterEffect{
     var filterCIName:String!
 }
 class EditImageVC:  UIViewController {
-
+    
     var selectedImg: UIImage!
     var originalImg: UIImage!
     var filters:[filterEffect]!
@@ -23,7 +23,7 @@ class EditImageVC:  UIViewController {
     var currentFilter: CIFilter!
     var selectedIndex:Int = 0
     var changesMade:Bool!
-   
+    
     lazy var imageView:UIImageView = {
         let img = UIImageView()
         img.clipsToBounds = true
@@ -32,7 +32,7 @@ class EditImageVC:  UIViewController {
         return img
     }()
     
-     lazy var filtersView:UIView = {
+    lazy var filtersView:UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.backgroundColor = .black
