@@ -35,7 +35,7 @@ class VideosVC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         headerView.delegate = self
-        collectionView.register(VideoCollectionViewCell.self, forCellWithReuseIdentifier: "ImageCollectionViewCell")
+        collectionView.register(VideoCollectionViewCell.self, forCellWithReuseIdentifier: "VideoCollectionViewCell")
         return collectionView
     }()
     
@@ -46,9 +46,6 @@ class VideosVC: UIViewController {
         view.backgroundColor = .white
         setUpNavigationBar()
         setupViews()
-        
-        ///Assigning Custom layout
-        
         getVideosAndCached()
         
         
@@ -63,7 +60,7 @@ class VideosVC: UIViewController {
     
     func getVideosAndCached()  {
         
-        FetchVideoModel.fetchVideos(url: "\(Constants.BASE_URL)/search", query: "new", perPage: "10", page: "\(page)") { (FetchedImages,err)  in
+        FetchVideoModel.fetchVideos(url: "\(Constants.BASE_URL_VIDEO)/search", query: "new", perPage: "10", page: "\(page)") { (FetchedImages,err)  in
             guard let FetchedImages=FetchedImages else{return}
             self.FetchedVideos = FetchedImages
             self.getImageArray(FetchedImages)
@@ -74,18 +71,8 @@ class VideosVC: UIViewController {
     }
     
     func getImageArray(_ data:MainVideosModel){
-        var images = [VideoModel]()
-        guard let imgResult = data.videos else {return}
-        for i in 0..<imgResult.count{
-//            let img = VideoModel(height: <#T##Int#>, photographer: <#T##String#>, url: <#T##String#>, photographerID: <#T##Int#>, src: <#T##Src?#>, id: <#T##Int#>, duration: <#T##Int?#>, liked: <#T##Bool#>, width: <#T##Int#>, photographerURL: <#T##String#>)
-//                VideoModel(height: imgResult[i].height, photographer: "", url: "", photographerID: 0 , id: imgResult[i].id, liked: false, duration: imgResult[i].duration, width: imgResult[i].width, photographerURL: imgResult[i].src?.medium ?? "")
-//            images.append(img)
-        }
-        if videoList.count <= 0 {
-            videoList = images
-        } else {
-            videoList.append(contentsOf: images)
-        }
+        videoList = data.videos
+        
     }
     
     
@@ -169,15 +156,15 @@ extension VideosVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//            let videoURL = URL(string: videoList[indexPath.row].videoUrl)
-//            let player = AVPlayer(url: videoURL!)
-//            let playerViewController = AVPlayerViewController()
-//            playerViewController.player = player
-//            
-//            present(playerViewController, animated: true) {
-//                player.play()
-//            }
+        let videoURL = URL(string: videoList[indexPath.row].videoFiles.first?.link ?? "")
+        let player = AVPlayer(url: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        
+        present(playerViewController, animated: true) {
+            player.play()
         }
+    }
     
     
 }

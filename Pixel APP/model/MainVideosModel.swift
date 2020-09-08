@@ -9,37 +9,81 @@
 import UIKit
 
 struct MainVideosModel:Codable {
-    var totalResults,page,perPage:Int?
-          var nextPage: String?
-          var videos: [VideoModel]?
+    let videos: [VideoModel]
+       let perPage: Int
+       let url: String
+       let totalResults, page: Int
 
-          enum CodingKeys: String, CodingKey {
-              case page
-              case totalResults = "total_results"
-              case nextPage = "next_page"
-              case videos
-              case perPage = "per_page"
-          }
+       enum CodingKeys: String, CodingKey {
+           case videos
+           case perPage = "per_page"
+           case url
+           case totalResults = "total_results"
+           case page
+       }
 }
 
 struct VideoModel:Codable {
-    let height: Int
-          let photographer: String
-          let url: String
-          let photographerID: Int
-          var src: Src?
-          let id: Int
-    var duration: Int?
-    
-          let liked: Bool
-          let width: Int
-          let photographerURL: String
+  let height: Int
+    let user: User
+    let videoFiles: [VideoFile]
+    let id: Int
+    var fullRes: String?
+    let width: Int
+    let image: String
+    let duration: Int
+    let videoPictures: [VideoPicture]
+    var tags: [String]?
+    let url: String
 
-          enum CodingKeys: String, CodingKey {
-              case height, photographer, url,duration
-              case photographerID = "photographer_id"
-              case src, id, liked, width
-              case photographerURL = "photographer_url"
-          }
+    enum CodingKeys: String, CodingKey {
+        case height, user
+        case videoFiles = "video_files"
+        case id
+        case fullRes = "full_res"
+        case width, image, duration
+        case videoPictures = "video_pictures"
+        case tags, url
+    }
     
 }
+
+
+struct User: Codable {
+    let id: Int
+    let name: String
+    let url: String
+}
+
+// MARK: - VideoFile
+struct VideoFile: Codable {
+    let link: String
+    let id: Int
+    let quality: Quality
+    let fileType: FileType
+    let width, height: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case link, id, quality
+        case fileType = "file_type"
+        case width, height
+    }
+}
+
+enum FileType: String, Codable {
+    case videoMp4 = "video/mp4"
+}
+
+enum Quality: String, Codable {
+    case hd = "hd"
+    case hls = "hls"
+    case sd = "sd"
+}
+
+// MARK: - VideoPicture
+struct VideoPicture: Codable {
+    let id: Int
+    let picture: String
+    let nr: Int
+}
+

@@ -32,6 +32,7 @@ class VideoCollectionViewCell: BaseCollectionCell {
            v.backgroundColor = .lightGray
            v.layer.cornerRadius = 8
            v.alpha = 0.5
+        
            return v
        }()
        
@@ -40,6 +41,8 @@ class VideoCollectionViewCell: BaseCollectionCell {
            v.backgroundColor = .black
            v.layer.cornerRadius = 8
            v.alpha = 0.5
+        v.addSubViews(views: playBtnView)
+        playBtnView.centerInSuperview()
            return v
        }()
        
@@ -62,21 +65,16 @@ class VideoCollectionViewCell: BaseCollectionCell {
        }()
     
     override func setupView() {
-        addSubViews(views: playBtnView)
         stack(imgView)
-        
-        playBtnView.centerInSuperview()
+        stack(backView)
+        stack(overView)
         stack(UIView(),hstack(UIView(),durationLabel)).withMargins(.allSides(16))
-        
-                
-             
-        
     }
     
     func manageData(){
         guard let data = data else {return}
-        imgView.cacheImageWithLoader(withURL: data.src?.original ?? "", view: backView)
-        guard let interval = data.duration else { return }
+        imgView.cacheImageWithLoader(withURL: data.videoPictures.first?.picture ?? "" , view: backView)
+         let interval = data.duration
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.minute, .second]
         formatter.unitsStyle = .positional
