@@ -172,9 +172,9 @@ extension ImagesVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
         }
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            //        let vc = ImagePreviewViewController()
-            //        vc.imageId = imageList![indexPath.row].id
-            //        navigationController?.pushViewController(vc, animated: true)
+                    let vc = ImagePreviewVC()
+            vc.imageId = imageList[indexPath.row].id
+                    navigationController?.pushViewController(vc, animated: true)
         }
         
     }
