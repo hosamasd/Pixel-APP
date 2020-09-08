@@ -53,10 +53,10 @@ class HeaderView:UIView {
     
     lazy var searchButton: UIButton = {
         let btn = UIButton()
-        btn.setTitle("", for: .normal)
+        btn.setImage(UIImage(named: "search"), for: .normal)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.addTarget(self, action: #selector(searchBar), for: .touchUpInside)
-        
+        btn.constrainWidth(constant: 20)
         return btn
     }()
     
@@ -87,25 +87,13 @@ class HeaderView:UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         [searchLabel,searchImage].forEach{$0.translatesAutoresizingMaskIntoConstraints=false}
-        addSubViews(views: searchBarView,collectionView,seperatorView)
+//        addSubViews(views: searchBarView,collectionView,seperatorView)
         
-        stack(searchBarView,collectionView,seperatorView,spacing:8).withMargins(.init(top: 8, left: 0, bottom: 0, right: 0))
+        stack(searchBarView,collectionView,seperatorView,spacing:8).withMargins(.init(top: 8, left: 16, bottom: 0, right: 16))
         
         //        setUpConstraints()
         
         
-    }
-    
-    func setUpConstraints(){
-        
-        NSLayoutConstraint.activate([
-            searchImage.centerYAnchor.constraint(equalTo: searchBarView.centerYAnchor),
-            searchLabel.centerYAnchor.constraint(equalTo: searchBarView.centerYAnchor),
-            searchButton.leadingAnchor.constraint(equalTo: searchBarView.leadingAnchor),
-            searchButton.trailingAnchor.constraint(equalTo: searchBarView.trailingAnchor),
-            searchButton.topAnchor.constraint(equalTo: searchBarView.topAnchor),
-            searchButton.bottomAnchor.constraint(equalTo: searchBarView.bottomAnchor)
-        ])
     }
     
     @objc func searchBar(){
@@ -131,10 +119,10 @@ extension HeaderView: UICollectionViewDataSource, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        collectionView.contentInset = UIEdgeInsets(top: 17, left: 17, bottom: 17, right: 17)
+        collectionView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 17, right: 0)
         let font = UIFont.systemFont(ofSize: 23)
         let width = categoryData[indexPath.row].categoryTitle.width(withConstrainedHeight: 60, font: font)
-        return CGSize(width: width + 30, height: 60)
+        return CGSize(width: 120, height: 60)//width + 30
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
