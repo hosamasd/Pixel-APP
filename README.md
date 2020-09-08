@@ -1,6 +1,18 @@
 # Pixel-APP
 
 Simple Pixel-APP . layout done Programtically using code.
+
+
+    MVC Pattern
+    Programmatic UI in swift 5.1
+    Custom Collection view layout (Pinterest layout)
+    Networking and handling requests
+    Image Caching
+    Pagination
+    Onboarding
+    Adding Filters to image using Core Image framework.
+
+
 Enjoy!
 
 # first demo video..
