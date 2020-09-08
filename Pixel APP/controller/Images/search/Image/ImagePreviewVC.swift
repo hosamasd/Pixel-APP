@@ -116,7 +116,7 @@ class ImagePreviewVC:  UIViewController{
     }
     
     @objc func editButtonPressed(){
-                let VC = EditImageViewController()
+                let VC = EditImageVC()
                 VC.selectedImg = self.imageView.image
                 VC.originalImg = self.imageView.image
                 let navVC = UINavigationController(rootViewController: VC)

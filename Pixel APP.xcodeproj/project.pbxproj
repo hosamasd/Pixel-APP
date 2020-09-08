@@ -33,6 +33,8 @@
 		9F2EF21E2506E51B0070F96C /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EF21D2506E51B0070F96C /* OnboardingCollectionViewCell.swift */; };
 		9F6560572507E1E600AB86EF /* MainPhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6560562507E1E600AB86EF /* MainPhotosModel.swift */; };
 		9F6560592507E26D00AB86EF /* MainServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6560582507E26D00AB86EF /* MainServices.swift */; };
+		9F8A835125081D0300CB0F17 /* EditImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A835025081D0300CB0F17 /* EditImageVC.swift */; };
+		9F8A835425081D6800CB0F17 /* FilterPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A835325081D6800CB0F17 /* FilterPreviewCollectionViewCell.swift */; };
 		9FC3052E2507FEE300C4C67E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3052D2507FEE300C4C67E /* SearchVC.swift */; };
 		9FC305312508023C00C4C67E /* ImagePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC305302508023C00C4C67E /* ImagePreviewVC.swift */; };
 		FAA005ACDD522E8105D18C44 /* Pods_Pixel_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D19BC427C6586875480F8 /* Pods_Pixel_APP.framework */; };
@@ -69,6 +71,8 @@
 		9F2EF21D2506E51B0070F96C /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F6560562507E1E600AB86EF /* MainPhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPhotosModel.swift; sourceTree = "<group>"; };
 		9F6560582507E26D00AB86EF /* MainServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainServices.swift; sourceTree = "<group>"; };
+		9F8A835025081D0300CB0F17 /* EditImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageVC.swift; sourceTree = "<group>"; };
+		9F8A835325081D6800CB0F17 /* FilterPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		9FC3052D2507FEE300C4C67E /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		9FC305302508023C00C4C67E /* ImagePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewVC.swift; sourceTree = "<group>"; };
 		F32D19BC427C6586875480F8 /* Pods_Pixel_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pixel_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +206,7 @@
 		9F2EF2042506DD050070F96C /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				9F8A835225081D5B00CB0F17 /* edit image */,
 				9F2EF21C2506E5120070F96C /* ONBOARD */,
 				9F2EF2082506DD380070F96C /* BaseCollectionCell.swift */,
 				9F2EF2052506DD0A0070F96C /* images */,
@@ -252,11 +257,28 @@
 			path = ONBOARD;
 			sourceTree = "<group>";
 		};
+		9F8A834F25081CFA00CB0F17 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				9FC305302508023C00C4C67E /* ImagePreviewVC.swift */,
+				9F8A835025081D0300CB0F17 /* EditImageVC.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		9F8A835225081D5B00CB0F17 /* edit image */ = {
+			isa = PBXGroup;
+			children = (
+				9F8A835325081D6800CB0F17 /* FilterPreviewCollectionViewCell.swift */,
+			);
+			path = "edit image";
+			sourceTree = "<group>";
+		};
 		9FC3052F2508022B00C4C67E /* search */ = {
 			isa = PBXGroup;
 			children = (
 				9FC3052D2507FEE300C4C67E /* SearchVC.swift */,
-				9FC305302508023C00C4C67E /* ImagePreviewVC.swift */,
+				9F8A834F25081CFA00CB0F17 /* Image */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -386,6 +408,7 @@
 				9F2EF20F2506E1BA0070F96C /* Constants.swift in Sources */,
 				9F2EF2162506E3780070F96C /* ImageCollectionViewCell.swift in Sources */,
 				9F2EF1DB2506D90E0070F96C /* AppDelegate.swift in Sources */,
+				9F8A835425081D6800CB0F17 /* FilterPreviewCollectionViewCell.swift in Sources */,
 				9F2EF2112506E3230070F96C /* ListImageData.swift in Sources */,
 				9F2EF1DD2506D90E0070F96C /* SceneDelegate.swift in Sources */,
 				9F6560592507E26D00AB86EF /* MainServices.swift in Sources */,
@@ -398,6 +421,7 @@
 				9F2EF2002506DA6F0070F96C /* OnboardingVC.swift in Sources */,
 				9F2EF2092506DD380070F96C /* BaseCollectionCell.swift in Sources */,
 				9F2EF21B2506E4E40070F96C /* OnboardingData.swift in Sources */,
+				9F8A835125081D0300CB0F17 /* EditImageVC.swift in Sources */,
 				9F2EF2142506E35E0070F96C /* PinterestLayout.swift in Sources */,
 				9F2EF1F62506D96E0070F96C /* UIButton.swift in Sources */,
 				9F2EF1FE2506DA480070F96C /* VideosVC.swift in Sources */,
