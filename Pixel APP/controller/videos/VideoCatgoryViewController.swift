@@ -1,62 +1,80 @@
 //
-//  VideosVC.swift
+//  VideoCatgoryViewController.swift
 //  Pixel APP
 //
-//  Created by Hossam on 9/7/20.
+//  Created by Hossam on 9/8/20.
 //  Copyright © 2020 Hossam. All rights reserved.
 //
 
 import UIKit
 import AVKit
 
-class VideosVC: UIViewController {
+class VideoCatgoryViewController: UIViewController {
     
-    
+    var query = ""
     var FetchedVideos:MainVideosModel?
     var videoList=[VideoModel]()
-    
     var page:Int = 1
     
-    lazy var headerView: VideoHeaderView = {
-        let view = VideoHeaderView()
-        view.backgroundColor = .white
-        return view
+    lazy var collectionView: UICollectionView = {
+        let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: PinterestLayout.init())
+        cv.showsVerticalScrollIndicator = false
+        cv.showsHorizontalScrollIndicator = false
+        cv.backgroundColor = UIColor(red: 239/255, green: 252/255, blue: 255/255, alpha: 1)
+        layout.scrollDirection = .vertical
+        cv.setCollectionViewLayout(layout, animated: false)
+        let customLayout = PinterestLayout()
+        cv.collectionViewLayout = customLayout
+        cv.delegate = self
+        cv.dataSource = self
+        cv.register(VideoCollectionViewCell.self, forCellWithReuseIdentifier: "VideoCollectionViewCell")
+        
+        return cv
     }()
     
-    lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: PinterestLayout.init())
-        collectionView.showsVerticalScrollIndicator = false
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = UIColor(red: 239/255, green: 252/255, blue: 255/255, alpha: 1)
-        layout.scrollDirection = .vertical
-        collectionView.setCollectionViewLayout(layout, animated: false)
-        let customLayout = PinterestLayout()
-        collectionView.collectionViewLayout = customLayout
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        headerView.delegate = self
-        collectionView.register(VideoCollectionViewCell.self, forCellWithReuseIdentifier: "VideoCollectionViewCell")
-        return collectionView
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let aI = UIActivityIndicatorView()
+        aI.style = .large
+        aI.color = .darkGray
+        aI.translatesAutoresizingMaskIntoConstraints = false
+        return aI
     }()
     
     let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        setUpNavigationBar()
-        setupViews()
-        getVideosAndCached()
         
+        
+        
+        setupViews()
+        setUpNavigationBar()
+        
+        if let layout = collectionView.collectionViewLayout as? PinterestLayout {
+            layout.delegate = self
+        }
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        getVideosAndCached()
+        ///Assigning Custom layout
+        
+        activityIndicator.startAnimating()
         
     }
     
     func setupViews()  {
-        view.addSubViews(views: headerView,collectionView)
+        view.addSubViews(views: collectionView,activityIndicator)
         
-        headerView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
-        collectionView.anchor(top: headerView.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+        collectionView.fillSuperview()
+        
+        
+        
+        NSLayoutConstraint.activate([
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
+    
+    
     
     func getVideosAndCached()  {
         
@@ -65,6 +83,8 @@ class VideosVC: UIViewController {
             self.FetchedVideos = FetchedImages
             self.getImageArray(FetchedImages)
             DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
                 self.collectionView.reloadData()
             }
         }
@@ -79,12 +99,12 @@ class VideosVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setUpNavigationBar()
-        tabBarController?.tabBar.isHidden = false
-        self.tabBarController?.tabBar.layer.zPosition = 0
+        tabBarController?.tabBar.isHidden = true
+        self.tabBarController?.tabBar.layer.zPosition = -1
     }
     
     func setUpNavigationBar(){
-        navigationController?.navigationBar.topItem?.title = "PIXEL"
+        navigationItem.title = "\(query)"
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 0.5)
@@ -93,20 +113,34 @@ class VideosVC: UIViewController {
         navigationController?.navigationBar.layer.shadowRadius = 0.3
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.isHidden = false
         
         self.navigationController!.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont(name: "Times-Bold", size: 22)!,
             NSAttributedString.Key.foregroundColor: UIColor.black
         ]
+        
+        let backButton = UIButton(type: .system)
+        backButton.setImage(UIImage(named: "whiteBack")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        backButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+        backButton.addTarget(self, action: #selector(backBtn), for: .touchUpInside)
+        let leftBarButtonItem = UIBarButtonItem()
+        leftBarButtonItem.customView = backButton
+        navigationItem.setLeftBarButton(leftBarButtonItem, animated: false)
+        
     }
+    
+    @objc func backBtn(){
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     
 }
 
-extension VideosVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension VideoCatgoryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return videoList.count
     }
     
@@ -165,26 +199,9 @@ extension VideosVC: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
             player.play()
         }
     }
-    
-    
 }
 
-extension VideosVC: HeaderActionsProtocol{
-    
-    func didSearchBarTapped() {
-        //        let vc = VideoSearchViewController()
-        //        navigationController?.pushViewController(vc, animated: false)
-    }
-    
-    func categoryTapped(_ category: String) {
-                let vc = VideoCatgoryViewController()
-                vc.query = category
-                navigationController?.pushViewController(vc, animated: true)
-    }
-    
-}
-
-extension VideosVC: PinterestLayoutDelegate {
+extension VideoCatgoryViewController: PinterestLayoutDelegate {
     func collectionView(
         _ collectionView: UICollectionView,
         heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
@@ -195,5 +212,3 @@ extension VideosVC: PinterestLayoutDelegate {
         
     }
 }
-
-
