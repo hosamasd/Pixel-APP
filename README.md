@@ -1,6 +1,6 @@
 # Pixel-APP
 
-Simple only design for Payments-Desgin-App with dumy data . layout done Programtically using code.
+Simple Pixel-APP . layout done Programtically using code.
 Enjoy!
 
 # first demo video..
@@ -17,3 +17,12 @@ Enjoy!
 
 
 ![Alt Text](https://j.gifs.com/p81Zwp.gif)
+
+
+
+
+# third demo video..
+
+
+
+![Alt Text](https://j.gifs.com/vl1QqX.gif)
